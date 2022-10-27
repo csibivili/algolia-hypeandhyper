@@ -12,7 +12,7 @@ const REQUIRED_SETTINGS = {
     // Defines the order algolia ranks various attributes in
     searchableAttributes: [`title`, `headings`, `html`, `url`, `tags.name`, `tags`, `authors.name`, `authors`],
     // Add slug to attributes we can filter by in order to find fragments to remove/delete
-    attributesForFaceting: [`filterOnly(slug)`]
+    attributesForFaceting: [`filterOnly(slug)`, `filterOnly(tags.name)`]
 };
 
 const AlgoliaError = ({code, statusCode, originalError}) => {
